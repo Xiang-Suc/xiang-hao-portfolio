@@ -227,10 +227,11 @@ function initScrollAnimations() {
 
 // Contact form functionality
 function initContactForm() {
-    const form = document.querySelector('.contact-form');
+    const form = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
     
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form values
@@ -240,39 +241,59 @@ function initContactForm() {
             
             // Basic validation
             if (!name || !email || !message) {
-                alert('Please fill in all fields');
+                formStatus.textContent = 'Please fill in all fields';
+                formStatus.className = 'error-message';
                 return;
             }
             
-            // Simulate form submission - replace with actual backend logic
+            // Update button state
             const submitBtn = form.querySelector('button[type="submit"]');
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             
-            setTimeout(() => {
-                // Simulate success
-                form.reset();
-                submitBtn.textContent = 'Message Sent!';
-                
-                setTimeout(() => {
+            // Prepare template parameters for EmailJS
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_name: 'Xiang Hao',
+                to_email: 'xianghao98520@gmail.com'
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('service_f36ex1c', 'template_6ulbp3e', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    form.reset();
+                    
+                    // Show success message
+                    formStatus.textContent = 'Your message has been sent successfully!';
+                    formStatus.className = 'success-message';
+                    
+                    submitBtn.textContent = 'Message Sent!';
+                    
+                    // Reset button after a delay
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Send Message';
+                        submitBtn.disabled = false;
+                        
+                        // Clear status after some time
+                        setTimeout(() => {
+                            formStatus.textContent = '';
+                            formStatus.className = '';
+                        }, 3000);
+                    }, 3000);
+                })
+                .catch(function(error) {
+                    console.log('FAILED...', error);
+                    
+                    // Show error message
+                    formStatus.textContent = 'Failed to send message. Please try again later or contact directly via email.';
+                    formStatus.className = 'error-message';
+                    
                     submitBtn.textContent = 'Send Message';
                     submitBtn.disabled = false;
-                }, 3000);
-                
-                // Display success message
-                const successMsg = document.createElement('div');
-                successMsg.className = 'success-message';
-                successMsg.textContent = 'Your message has been sent successfully!';
-                form.appendChild(successMsg);
-                
-                // Remove success message after some time
-                setTimeout(() => {
-                    successMsg.style.opacity = '0';
-                    setTimeout(() => {
-                        form.removeChild(successMsg);
-                    }, 300);
-                }, 3000);
-            }, 1500);
+                });
         });
     }
 }
@@ -471,45 +492,37 @@ function makeProjectCardsClickable() {
     
     projectCards.forEach(card => {
         card.addEventListener('click', function(e) {
-            // Don't navigate if clicking on GitHub link
-            if (e.target.closest('.project-link')) {
+            // If clicking on the GitHub link, don't navigate to project detail
+            if (e.target.closest('.project-link') || e.target.closest('.project-links')) {
                 return;
             }
             
-            // Determine which project was clicked based on its title
-            const projectTitle = this.querySelector('h3').textContent.trim();
-            let projectUrl = '';
+            const projectTitle = this.querySelector('h3').textContent;
+            let projectUrl;
             
             switch(projectTitle) {
-                case 'House Price Prediction':
-                    projectUrl = 'projects/house-price.html';
-                    break;
                 case 'Covid-19 Infection Rate Tracker':
                     projectUrl = 'projects/covid-tracker.html';
                     break;
                 case 'Global Development Insights Dashboard':
                     projectUrl = 'projects/global-dashboard.html';
                     break;
+                case 'House Price Prediction':
+                    projectUrl = 'projects/house-price.html';
+                    break;
                 case 'Cold Call System':
                     projectUrl = 'projects/cold-call.html';
-                    break;
-                case 'Time Tracker':
-                    projectUrl = 'projects/time-tracker.html';
-                    break;
-                case 'Safety Detection System':
-                    projectUrl = 'projects/safety-detection.html';
-                    break;
-                case 'Dataset-JSON Viewer':
-                    projectUrl = 'projects/json-viewer.html';
                     break;
                 case 'Karting Game':
                     projectUrl = 'projects/karting-game.html';
                     break;
+                case 'Time Tracker':
+                    projectUrl = 'projects/time-tracker.html';
+                    break;
                 default:
-                    projectUrl = '#projects';
+                    return; // If project doesn't have a detail page yet
             }
             
-            // Navigate to the project detail page
             window.location.href = projectUrl;
         });
     });

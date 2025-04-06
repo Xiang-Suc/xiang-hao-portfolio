@@ -847,6 +847,35 @@ section {
     box-shadow: 0 0 0 2px rgba(255, 58, 47, 0.2);
 }
 
+/* Contact form status messages */
+.success-message {
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    border-left: 4px solid #2ecc71;
+}
+
+.error-message {
+    background-color: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    border-left: 4px solid #e74c3c;
+}
+
+#form-status {
+    transition: all 0.3s ease;
+    height: auto;
+    overflow: hidden;
+}
+
 /* Footer */
 footer {
     background-color: var(--dark-color);
