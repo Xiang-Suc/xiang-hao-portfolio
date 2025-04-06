@@ -1099,4 +1099,74 @@ footer {
     .certificate-item {
         width: 100%;
     }
+}
+
+/* Resume Section */
+.resume-section {
+    padding: 6rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.resume-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.resume-preview {
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.resume-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.resume-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resume-actions .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.resume-actions .btn i {
+    font-size: 1.1rem;
+}
+
+.resume-actions .btn:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .resume-preview {
+        height: 500px;
+    }
+    
+    .resume-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .resume-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
 } 
