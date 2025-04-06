@@ -47,22 +47,50 @@ portfolio/
 └── README.md
 ```
 
-## Local Development
+## CI/CD Workflow
 
-1. Clone this repository:
-```bash
-git clone https://github.com/Xiang-Suc/xiang-hao-portfolio.git
-cd xiang-hao-portfolio
-```
+This project uses GitHub Actions for continuous integration and deployment. The workflow is configured to automatically build and deploy the website to GitHub Pages whenever changes are pushed to the `main` branch.
 
-2. Open `index.html` in your browser or use a local development server:
-```bash
-# Using Python's built-in server
-python3 -m http.server
+### How It Works
 
-# Or using Node.js with http-server
-npx http-server
-```
+1. **Automatic Triggers**: 
+   - When code is pushed to the `main` branch
+   - When manually triggered through GitHub Actions interface
+
+2. **Build Process**:
+   - Checks out the latest code
+   - Sets up GitHub Pages environment
+   - Performs any necessary build steps
+   - Uploads the build artifacts
+
+3. **Deployment**:
+   - Automatically deploys to GitHub Pages
+   - Updates the live website with the latest changes
+
+### Local Development
+
+To work on this website locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Xiang-Suc/xiang-hao-portfolio.git
+   cd xiang-hao-portfolio
+   ```
+
+2. Make your changes to the HTML, CSS, or JavaScript files
+
+3. Push your changes to GitHub:
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   git push
+   ```
+
+4. The GitHub Actions workflow will automatically build and deploy your changes
+
+### Workflow Status
+
+You can check the status of the workflow in the Actions tab of the GitHub repository.
 
 ## Deployment
 
