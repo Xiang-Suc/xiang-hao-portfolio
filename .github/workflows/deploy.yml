@@ -1,0 +1,55 @@
+name: Build and Deploy Website
+
+on:
+  push:
+    branches: [ main ]
+  # 允许手动触发工作流
+  workflow_dispatch:
+
+# 设置GITHUB_TOKEN的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 允许一个并发部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      # 设置GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        
+      # 执行构建步骤（如果需要的话）
+      - name: Build website
+        run: |
+          echo "Building the website..."
+          # 如果您有构建步骤，例如npm build，可以在这里添加
+          # npm ci
+          # npm run build
+      
+      # 上传构建结果
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: '.'
+  
+  # 部署到GitHub Pages
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2 
