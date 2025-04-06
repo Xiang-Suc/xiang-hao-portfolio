@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Certified Cloud Practitioner</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+            background: linear-gradient(145deg, #1a1f29, #2f3d4c);
+            font-family: 'Arial', sans-serif;
+        }
+        .certificate-card {
+            width: 90%;
+            max-width: 600px;
+            background-color: #232F3E;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .aws-logo {
+            display: block;
+            width: 60px;
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #FF9900;
+            margin-bottom: 10px;
+        }
+        .cert-type {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .badge-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .badge {
+            width: 120px;
+            height: 120px;
+            background-color: #FF9900;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 25px;
+        }
+        .badge img {
+            width: 80%;
+            height: auto;
+        }
+        .details {
+            flex: 1;
+        }
+        .issued-by {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 5px;
+        }
+        .issuer {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 15px;
+        }
+        .date {
+            font-size: 16px;
+            color: #ccc;
+        }
+        .corner-decoration {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 153, 0, 0.1);
+            border-radius: 100%;
+            right: -75px;
+            top: -75px;
+        }
+        .bottom-decoration {
+            position: absolute;
+            width: 200px;
+            height: 20px;
+            background-color: #FF9900;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-card">
+        <div class="corner-decoration"></div>
+        <div class="bottom-decoration"></div>
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA0OCI+PHBhdGggZmlsbD0iI0ZGOTkwMCIgZD0iTTUgMTcuMDk0aDcwdjE2SDV6Ii8+PHBhdGggZmlsbD0iI0ZGOTkwMCIgZD0iTTIxLjMgMzguMDk0bDIuNDQtNy4zMiA4LjYzLTIzLjYxaDcuOGwtMTIuMjYgMzAuOTNoLTYuNnYuMDF6bS0xNS43IDBsMTIuMjctMzAuOTNoNi42bC0xMi4yNiAzMC45M2gtNi42em0zNS4wNS03Ljk4bDEuNDYtNS4wNSA0LjgtMTcuOWg3LjMzbC03LjkyIDMwLjkzaC02LjdsMS4wMy03Ljk4em0yNS4ytMjIuOTVINzIuNEw2Ny44IDMxLjUyaC0yLjA3bC00LjkzLTI0LjRoNi43NmwzLjI1IDE3LjA3IDUuODMtMTcuMDd6Ii8+PC9zdmc+" class="aws-logo" alt="AWS Logo">
+        <div class="title">AWS Certified</div>
+        <div class="cert-type">Cloud Practitioner</div>
+        
+        <div class="badge-container">
+            <div class="badge">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMjMyRjNFIiBkPSJNMjU2IDM4LjRjLTEyMC4zIDAtMjE3LjYgOTcuMy0yMTcuNiAyMTcuNlMxMzUuNyA0NzMuNiAyNTYgNDczLjZjMTIwLjMgMCAyMTcuNi05Ny4zIDIxNy42LTIxNy42UzM3Ni4zIDM4LjQgMjU2IDM4LjR6bTEwNi42IDE1NS40YzQuMiA1LjYgNi40IDEyLjYgNi40IDE5LjljMCA5LTMuNiAxNy42LTkuOSAyMy45LTEuMiAxLjItMi41IDIuMy0zLjggMy4zLTIuMiAxLjYtNC41IDIuOS03IDRsLTIxLjUgOS4yLTI2LjQgMTEuNGMtMi4yIDEtNC40IDEuOC02LjcgMi42LTMuMSAxLjEtNi4zIDItOS42IDIuOC02LjkgMS43LTEzLjkgMi41LTIwLjkgMi41LTguNSAwLTE2LjktMS4zLTI1LTMuOC0zLjUtMS4xLTcuMS0yLjQtMTAuNS0zLjktMS40LS42LTIuOS0xLjMtNC4zLTIuMS0zLjItMS43LTYuMi0zLjUtOS4xLTUuNmwtNzAuNS00Ni41IDkuOC0xNC45IDY5LjQgNDUuOGMxLjkgMS4zIDMuOS0uMS0uMiAxLjMgMy41IDEuNyA3LjIgMy4xIDEwLjkgNC4yIDYuNiAxLjkgMTMuNCAyLjkgMjAuMyAyLjkgNS43IDAgMTEuMy0uNiAxNi45LTEuOCAyLjgtLjYgNS41LTEuMyA4LjItMi4xIDEuOS0uNiAzLjgtMS4yIDUuNi0yLjFsMjcuMi0xMS43IDIyLTkuNWMxLjYtLjcgMy4xLTEuNSA0LjUtMi41Ljg2LS42IDEuNy0xLjMgMi41LTIgMy44LTMuOCA2LTguOSA2LTE0LjNzLTIuMi0xMC41LTYtMTQuM2MtMy44LTMuOC04LjktNi0xNC4zLTZINjUuOHYtMTcuNUgzNDhjNS4zIDAgMTAuNCAxIDEwLjcgNC42IDEuMi4zIDIuMy43IDMuMyAxLjEuMS0uMS4yIDAgLjEuMS4xLjIuMy40LjQuNS4xLjEuMS4yLjIuM3YuMmMtLjEgMCAuMS4xLjEuMnptMzAuNi04Mi42SDExOC44Vjk0LjRoMjc0LjRjMTAuOCAwIDIxLjEgNC4zIDI4LjcgMTEuOSA3LjYgNy42IDExLjkgMTcuOSAxMS45IDI4LjcgMCAxMC44LTQuMyAyMS4xLTExLjkgMjguNy03LjYgNy42LTE3LjkgMTEuOS0yOC43IDExLjl2LTY0Ljh6Ii8+PC9zdmc+" alt="AWS Badge Icon">
+            </div>
+            <div class="details">
+                <div class="issued-by">Issued by</div>
+                <div class="issuer">Amazon Web Services Training and Certification</div>
+                <div class="date">2023</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

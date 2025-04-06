@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiang Hao's Portfolio</title>
+    <meta name="description" content="Xiang Hao - Software Engineer portfolio showcasing projects, experience, and skills">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Xiang Hao</div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="main-title">Hello, I'm Xiang Hao</h1>
+                <div class="typewriter">
+                    <span class="txt-rotate" data-period="2000" data-rotate='["Software Engineer", "MS Student at UC Davis", "Technology Enthusiast"]'></span>
+                </div>
+                <p class="hero-description">Passionate about building innovative solutions and exploring cutting-edge technologies.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Personal photo -->
+                <img src="images/IMG_0422.jpg" alt="Xiang Hao" class="profile-photo">
+                <div class="tech-particles"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a Software Engineer recently received my Master's degree in Computer Science at UC Davis in 2024. With a strong foundation in programming languages like Python, JavaScript, and Java, I'm passionate about building efficient and innovative software solutions.</p>
+                    <p>My experience spans across various domains including full-stack development, web development, computer vision, and data engineering. I enjoy tackling complex problems and creating technologies that make a meaningful impact.</p>
+                    <div class="tech-stack">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-icons">
+                            <span class="tech-icon"><i class="fab fa-python"></i></span>
+                            <span class="tech-icon"><i class="fab fa-js"></i></span>
+                            <span class="tech-icon"><i class="fab fa-react"></i></span>
+                            <span class="tech-icon"><i class="fab fa-java"></i></span>
+                            <span class="tech-icon"><i class="fab fa-aws"></i></span>
+                            <span class="tech-icon"><i class="fas fa-database"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-interests">
+                    <h3>Interests</h3>
+                    <div class="interest-cards">
+                        <div class="interest-card">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Software Development</h4>
+                        </div>
+                        <div class="interest-card">
+                            <i class="fas fa-robot"></i>
+                            <h4>Machine Learning</h4>
+                        </div>
+                        <div class="interest-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Data Visualization</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer</h3>
+                        <h4>EDA Clinical</h4>
+                        <span class="timeline-date">January 2025 - Present</span>
+                        <p>Engineered a dual-interface web app using FastAPI and JavaScript with Azure auto-scaling infrastructure. Designed automated workflows for timesheet approval, reporting, and conflict detection, reducing approval time by 60% and errors by 75%. Implemented robust security with JWT/OAuth2 and RBAC.</p>
+                        <div class="skills-used">
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">OAuth2</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer Intern</h3>
+                        <h4>EDA Clinical</h4>
+                        <span class="timeline-date">October 2024 - January 2025</span>
+                        <p>Streamlined data processing by leveraging Python Pandas for cleaning and transforming datasets and OpenPyXL for generating .xlsx files based on strict specifications, significantly reducing manual errors and ensuring compliance. Automated the conversion of structured Excel files to JSON by building robust pipelines using the json and PyYAML libraries, embedding necessary metadata for enhanced compatibility and accessibility.</p>
+                        <div class="skills-used">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">OpenPyXL</span>
+                            <span class="skill-tag">JSON</span>
+                            <span class="skill-tag">PyYAML</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer Intern</h3>
+                        <h4>HRG International Institute (Hefei) of Research and Innovation</h4>
+                        <span class="timeline-date">July 2021 - September 2021</span>
+                        <p>Automated safety detection systems using computer vision in Python with PyTorch. Reduced manual work by 30 hours daily and decreased safety violations by 1.2%. Streamlined CI/CD pipeline using GitHub actions and AWS ECS for same-day deployments.</p>
+                        <div class="skills-used">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer Intern</h3>
+                        <h4>Shanxi Yunlv Tianxia Network Technology Co., Ltd.</h4>
+                        <span class="timeline-date">January 2021 - March 2021</span>
+                        <p>Automated business expense approval and ticketing systems using FastAPI and Temporal. Enhanced product observability with Prometheus, Grafana, and Jaeger. Supported company-wide rollout across 6 departments, serving over 1200 employees.</p>
+                        <div class="skills-used">
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Grafana</span>
+                            <span class="skill-tag">Jaeger</span>
+                            <span class="skill-tag">Temporal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer Intern</h3>
+                        <h4>Shanxi Anxin Hengchuang Robot Tech Co., Ltd.</h4>
+                        <span class="timeline-date">July 2020 - September 2020</span>
+                        <p>Optimized warehouse robot operations by integrating laser sensors with reinforcement learning course correction algorithms using PyTorch in Python, reducing collisions and saving $40,000 annually. Improved delivery accuracy by 2% through early mismatch detection using computer vision with OpenCV in Python and a province-to-postal ID index stored in SQL. Increased fleet efficiency by 1% by streaming battery data with Kafka and scheduling charging priorities using Java.</p>
+                        <div class="skills-used">
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">Java</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="data">Data</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-img">
+                        <img src="images/time-tracker.png" alt="Time Tracker">
+                    </div>
+                    <div class="project-info">
+                        <h3>Time Tracker</h3>
+                        <p>Dual-interface web application for tracking and approving timesheets with automated workflows and comprehensive reporting capabilities.</p>
+                        <div class="project-tech">
+                            <span>FastAPI</span>
+                            <span>JavaScript</span>
+                            <span>Azure</span>
+                            <span>JWT/OAuth2</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/explore-eda/time-tracker" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai">
+                    <div class="project-img">
+                        <img src="images/safety-detection-system.png" alt="Safety Detection System">
+                    </div>
+                    <div class="project-info">
+                        <h3>Safety Detection System</h3>
+                        <p>Automated computer vision system for detecting safety violations in factory equipment and construction sites using deep learning.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>OpenCV</span>
+                            <span>AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Xiang-Suc" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="data">
+                    <div class="project-img">
+                        <img src="images/Dataset-json-viewer.png" alt="Dataset-JSON Viewer">
+                    </div>
+                    <div class="project-info">
+                        <h3>Dataset-JSON Viewer</h3>
+                        <p>Web-based tool for exploring and visualizing complex JSON datasets with interactive features and real-time data manipulation.</p>
+                        <div class="project-tech">
+                            <span>Flask</span>
+                            <span>Next.js</span>
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Xiang-Suc" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- New project: House Price Prediction -->
+                <div class="project-card" data-category="ai data">
+                    <div class="project-img">
+                        <img src="images/house-price-prediction.jpg" alt="House Price Prediction">
+                    </div>
+                    <div class="project-info">
+                        <h3>House Price Prediction</h3>
+                        <p>Machine learning model to predict house prices using data analysis and predictive modeling techniques.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Jupyter</span>
+                            <span>Pandas</span>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Xiang-Suc/House-price-prediction" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- New project: Covid Rate Tracker -->
+                <div class="project-card" data-category="data web">
+                    <div class="project-img">
+                        <img src="images/covid-tracker.jpg" alt="Covid Rate Tracker">
+                    </div>
+                    <div class="project-info">
+                        <h3>Covid-19 Infection Rate Tracker</h3>
+                        <p>Interactive tracker to monitor and visualize COVID-19 infection rates across regions using real-time data.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Data Visualization</span>
+                            <span>Flask</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Xiang-Suc/Covid-Rate-Tracker" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- New project: Global Development Insights Dashboard -->
+                <div class="project-card" data-category="data web">
+                    <div class="project-img">
+                        <img src="images/global-dashboard.jpg" alt="Global Development Dashboard">
+                    </div>
+                    <div class="project-info">
+                        <h3>Global Development Insights Dashboard</h3>
+                        <p>Interactive dashboard visualizing global development insights using D3.js and modern web technologies.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>D3.js</span>
+                            <span>HTML/CSS</span>
+                            <span>Data Visualization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Xiang-Suc/Global-Development-Insights-Dashboard" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- New project: Karting Game -->
+                <div class="project-card" data-category="web">
+                    <div class="project-img">
+                        <img src="images/karting-game.jpg" alt="Karting Game">
+                    </div>
+                    <div class="project-info">
+                        <h3>Karting Game</h3>
+                        <p>3D kart racing game featuring interactive gameplay, custom physics, and dynamic environments.</p>
+                        <div class="project-tech">
+                            <span>C#</span>
+                            <span>Unity</span>
+                            <span>3D Graphics</span>
+                            <span>Game Development</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Xiang-Suc/Karting_Game" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- New project: Cold Call System -->
+                <div class="project-card" data-category="web">
+                    <div class="project-img">
+                        <img src="images/cold-call.jpg" alt="Cold Call System">
+                    </div>
+                    <div class="project-info">
+                        <h3>Cold Call System</h3>
+                        <p>Educational tool that helps professors randomly select students to answer questions, allowing "on-deck" students to prepare responses.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>GUI Development</span>
+                            <span>Educational Technology</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Xiang-Suc/Cold-Call-System" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="certificates-section">
+            <div class="section-header">
+                <h2>Education & Certificates</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="certificates-slider">
+                <div class="certificate-item">
+                    <div class="certificate-img">
+                        <img src="images/The_University_of_California_Davis.svg.png" alt="Master of Science in Computer Science">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Master of Science</h3>
+                        <p>UC Davis - Computer Science</p>
+                        <span class="certificate-date">2022 - 2024</span>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-img">
+                        <img src="images/oregon-logo.png" alt="Bachelor of Science in Computer and Information Science">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Bachelor of Science</h3>
+                        <p>University of Oregon - Computer and Information Science</p>
+                        <span class="certificate-date">2019 - 2022</span>
+                    </div>
+                </div>
+                <div class="certificate-item">
+                    <div class="certificate-img">
+                        <img src="images/AWS.png" alt="AWS Certified Cloud Practitioner">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>AWS Certified Cloud Practitioner</h3>
+                        <p>Amazon Web Services</p>
+                        <span class="certificate-date">2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:xianghao98520@gmail.com">xianghao98520@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/xianghaosuc/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Xiang-Suc" target="_blank">GitHub</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>United States</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Xiang Hao</div>
+            <div class="social-links">
+                <a href="https://github.com/Xiang-Suc" class="social-link"><i class="fab fa-github"></i>
+                <a href="https://www.linkedin.com/in/xianghaosuc/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/hx_suc/" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2025 Xiang Hao. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

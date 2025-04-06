@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset-JSON Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+            background: linear-gradient(135deg, #141E30, #243B55);
+            font-family: 'Courier New', monospace;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+        }
+        .title {
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 1.1;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        .json-brackets {
+            font-size: 40px;
+            color: #4facfe;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 22px;
+            color: rgba(255,255,255,0.9);
+            margin: 20px 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .code-sample {
+            background-color: rgba(0,0,0,0.3);
+            color: #00f2fe;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: left;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .property {
+            color: #9F86FF;
+        }
+        .string {
+            color: #FF8E99;
+        }
+        .number {
+            color: #FFD166;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">DATASET-JSON <span class="json-brackets">{ }</span> VIEWER</div>
+        <div class="subtitle">Interactive • Visual • Powerful</div>
+        <div class="code-sample">
+            <div><span class="json-brackets">{</span></div>
+            <div>&nbsp;&nbsp;<span class="property">"data"</span>: <span class="json-brackets">[</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-brackets">{</span> <span class="property">"id"</span>: <span class="number">1</span>, <span class="property">"value"</span>: <span class="string">"Visualize"</span> <span class="json-brackets">}</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-brackets">{</span> <span class="property">"id"</span>: <span class="number">2</span>, <span class="property">"value"</span>: <span class="string">"Analyze"</span> <span class="json-brackets">}</span></div>
+            <div>&nbsp;&nbsp;<span class="json-brackets">]</span></div>
+            <div><span class="json-brackets">}</span></div>
+        </div>
+    </div>
+</body>
+</html> 
