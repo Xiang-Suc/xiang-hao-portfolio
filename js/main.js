@@ -260,6 +260,8 @@ function initContactForm() {
                 to_email: 'xianghao98520@gmail.com'
             };
             
+            console.log('Sending email with params:', templateParams);
+            
             // Send email using EmailJS
             emailjs.send('service_f36ex1c', 'template_6ulbp3e', templateParams)
                 .then(function(response) {
@@ -285,16 +287,18 @@ function initContactForm() {
                     }, 3000);
                 })
                 .catch(function(error) {
-                    console.log('FAILED...', error);
+                    console.error('FAILED...', error);
                     
-                    // Show error message
-                    formStatus.textContent = 'Failed to send message. Please try again later or contact directly via email.';
+                    // Show detailed error message
+                    formStatus.textContent = 'Failed to send message: ' + (error.message || 'Unknown error');
                     formStatus.className = 'error-message';
                     
                     submitBtn.textContent = 'Send Message';
                     submitBtn.disabled = false;
                 });
         });
+    } else {
+        console.error('Contact form element not found!');
     }
 }
 
