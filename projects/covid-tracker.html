@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Infection Rate Tracker - Project Details</title>
+    <meta name="description" content="Detailed information about the Covid-19 Infection Rate Tracker project by Xiang Hao">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Xiang Hao</div>
+            <ul class="nav-links">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#education" class="nav-link">Education</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project-container">
+            <div class="project-header">
+                <h1 class="project-title">Covid-19 Infection Rate Tracker</h1>
+                <p class="project-subtitle">Interactive tracker to monitor and visualize COVID-19 infection rates across regions using real-time data.</p>
+            </div>
+
+            <div class="project-section">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="project-overview">
+                    <img src="../images/covid_tracker.png" alt="Covid Rate Tracker Visualization">
+                    <div class="project-overview-content">
+                        <p>The Covid-19 Infection Rate Tracker is an application designed to help monitor the spread of COVID-19 infections across different regions. This tool provides real-time data visualization and tracking functionality to assist health officials, researchers, and the general public in understanding infection trends.</p>
+                        <p>Developed as a response to the global pandemic, this project combines data analysis with interactive visualization to provide an accessible way to monitor COVID-19 trends. The system uses color-coded indicators to quickly identify high-risk areas and periods of concern.</p>
+                        <div class="project-tech-stack">
+                            <h3>Technologies Used:</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fab fa-python"></i>Python</span>
+                                <span class="tech-tag"><i class="fab fa-js"></i>JavaScript</span>
+                                <span class="tech-tag"><i class="fab fa-flask"></i>Flask</span>
+                                <span class="tech-tag"><i class="fas fa-chart-bar"></i>Matplotlib</span>
+                                <span class="tech-tag"><i class="fas fa-table"></i>Pandas</span>
+                                <span class="tech-tag"><i class="fas fa-desktop"></i>Tkinter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="section-title">Key Features</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Real-time Data Visualization</h3>
+                            <p class="feature-description">Interactive charts and graphs that visualize COVID-19 infection rates, with automatic updates to reflect the latest data.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Region-based Tracking</h3>
+                            <p class="feature-description">Ability to monitor infection rates at different geographical levels, from global statistics down to local regions and communities.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Risk Level Indicators</h3>
+                            <p class="feature-description">Color-coded visualization system that highlights areas with high infection rates, making it easy to identify hotspots and concerning trends.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Historical Trend Analysis</h3>
+                            <p class="feature-description">Ability to view and analyze infection rate patterns over time, helping to identify trends and predict future developments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section workflow-section">
+                <h2 class="section-title">Project Workflow</h2>
+                <div class="workflow-container">
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Data Collection & Integration</h3>
+                            <p class="workflow-description">The system collects COVID-19 infection data from reliable public health sources and databases. APIs are utilized to fetch real-time statistics from trusted sources like Johns Hopkins University, WHO, and local health departments. The data includes confirmed cases, recovery rates, and fatality figures across different regions.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Data Processing & Standardization</h3>
+                            <p class="workflow-description">Raw data is processed and standardized to ensure consistency across different regions and reporting methodologies. This includes normalizing population data to calculate infection rates per capita, handling missing values, and applying statistical methods to smooth out reporting inconsistencies that might affect the visualization.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Data Visualization Development</h3>
+                            <p class="workflow-description">The processed data is transformed into interactive visualizations that make the information accessible and meaningful. Various visualization techniques are employed, including time-series graphs, color-coded maps, and comparative charts. The system uses color-coding (green for low risk, red for high risk) to provide immediate visual cues about infection severity.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">User Interface Implementation</h3>
+                            <p class="workflow-description">A user-friendly interface is developed to allow easy navigation through the data. The UI includes search functionality to find specific regions, filtering options to view data by different metrics, and date range selectors to analyze historical trends. The responsive design ensures usability across different devices and screen sizes.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Automated Update System</h3>
+                            <p class="workflow-description">An automated system is implemented to regularly update the data with the latest information. This ensures that users always have access to current statistics. The update frequency is configurable, with options for daily, hourly, or real-time updates depending on data source availability and user needs.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-tablet-alt"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Deployment & Accessibility</h3>
+                            <p class="workflow-description">The final application is deployed as both a web-based dashboard and a downloadable application. This dual deployment approach ensures maximum accessibility, allowing users to access the tracker from any internet-connected device or to use it offline with periodic data updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section gallery-section">
+                <h2 class="section-title">Project Gallery</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="../images/covid_tracker.png" alt="Covid Infection Rate Chart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-actions">
+                <a href="../index.html#projects" class="back-to-projects">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <a href="https://github.com/Xiang-Suc/Covid-Rate-Tracker" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Xiang Hao</div>
+            <div class="social-links">
+                <a href="https://github.com/Xiang-Suc" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/xianghaosuc/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/hx_suc/" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2025 Xiang Hao. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html> 

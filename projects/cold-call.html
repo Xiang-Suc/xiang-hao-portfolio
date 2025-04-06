@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Call System - Project Details</title>
+    <meta name="description" content="Detailed information about the Cold Call System project by Xiang Hao">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Xiang Hao</div>
+            <ul class="nav-links">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#education" class="nav-link">Education</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project-container">
+            <div class="project-header">
+                <h1 class="project-title">Cold Call System</h1>
+                <p class="project-subtitle">Educational tool that helps professors randomly select students to answer questions, allowing "on-deck" students to prepare responses.</p>
+            </div>
+
+            <div class="project-section">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="project-overview">
+                    <img src="../images/cold_call_system.png" alt="Cold Call System UI">
+                    <div class="project-overview-content">
+                        <p>The Cold Call System is an educational technology application designed to improve classroom engagement and participation. The system addresses the awkward silence that often follows when professors ask questions to a classroom by implementing a structured approach to student participation.</p>
+                        <p>This innovative tool randomly selects students from the class roster and displays them as "on-deck," giving these students advance notice that they may be called upon to answer a question. This advance warning allows students to prepare their thoughts and reduces anxiety, encouraging more thoughtful participation and creating a more dynamic learning environment.</p>
+                        <div class="project-tech-stack">
+                            <h3>Technologies Used:</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag"><i class="fab fa-python"></i>Python</span>
+                                <span class="tech-tag"><i class="fas fa-desktop"></i>Tkinter</span>
+                                <span class="tech-tag"><i class="fas fa-database"></i>SQLite</span>
+                                <span class="tech-tag"><i class="fas fa-file-csv"></i>CSV Handling</span>
+                                <span class="tech-tag"><i class="fas fa-random"></i>Random Selection Algorithms</span>
+                                <span class="tech-tag"><i class="fas fa-cogs"></i>OOP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2 class="section-title">Key Features</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">On-Deck Student Display</h3>
+                            <p class="feature-description">Shows a queue of four students who are next in line to be called upon, providing them with advance notice to prepare their responses.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Smart Random Selection</h3>
+                            <p class="feature-description">Implements an algorithm that ensures fair distribution of participation, preventing the same students from being called repeatedly while maintaining an element of randomness.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-import"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Class Roster Import</h3>
+                            <p class="feature-description">Easy import of class rosters from CSV files, making setup simple and allowing for quick updates when class composition changes.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Participation Tracking</h3>
+                            <p class="feature-description">Records and displays student participation metrics, helping instructors ensure balanced engagement across the entire class throughout the term.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section workflow-section">
+                <h2 class="section-title">Project Workflow</h2>
+                <div class="workflow-container">
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Problem Identification & Research</h3>
+                            <p class="workflow-description">The project began with identifying a common challenge in classroom settings - the reluctance of students to participate in discussions and answer questions. Research was conducted with professors and students to understand the dynamics of classroom participation, the barriers to student engagement, and potential solutions. The "on-deck" approach was identified as a promising method to increase participation while reducing student anxiety.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">System Design & Requirements</h3>
+                            <p class="workflow-description">Based on the initial research, detailed system requirements were defined in collaboration with education professionals. The design phase focused on creating an intuitive interface that would be easy for professors to use in real-time during lectures. Key functional requirements included random student selection, display of multiple on-deck students, import/export capabilities, and participation tracking.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Development & Implementation</h3>
+                            <p class="workflow-description">The system was implemented using Python with Tkinter for the graphical user interface. A modular, object-oriented approach was used to ensure maintainability and extensibility. The random selection algorithm was carefully designed to balance true randomness with fair distribution of participation. Data persistence was implemented using SQLite, allowing participation data to be stored between sessions.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Testing & Validation</h3>
+                            <p class="workflow-description">Rigorous testing was performed to ensure the system's reliability and usability. Unit tests were developed for core functions, particularly the selection algorithm. Usability testing was conducted with professors in simulated classroom environments to refine the interface and workflow. Performance testing ensured the system could handle large class rosters efficiently.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Pilot Implementation</h3>
+                            <p class="workflow-description">The system was piloted in selected classrooms to gather real-world feedback. During this phase, professors used the tool in actual lectures and provided detailed feedback on its effectiveness and areas for improvement. Student feedback was also collected to understand how the on-deck approach affected their preparation and participation.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Refinement & Enhancement</h3>
+                            <p class="workflow-description">Based on feedback from the pilot implementation, the system was refined and enhanced. User interface improvements were made to increase usability during lectures. Additional features were added, such as expanded statistics on student participation and customizable selection parameters. Performance optimizations were implemented for larger class sizes.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="workflow-content">
+                            <h3 class="workflow-title">Documentation & Training</h3>
+                            <p class="workflow-description">Comprehensive documentation was created for both users and developers. User guides include installation instructions, feature tutorials, and best practices for incorporating the system into teaching methodologies. Technical documentation covers the system architecture, code organization, and guidelines for future development and extension.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section gallery-section">
+                <h2 class="section-title">Project Gallery</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="../images/cold_call_system.png" alt="Cold Call System UI">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-actions">
+                <a href="../index.html#projects" class="back-to-projects">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <a href="https://github.com/Xiang-Suc/Cold-Call-System" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Xiang Hao</div>
+            <div class="social-links">
+                <a href="https://github.com/Xiang-Suc" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/xianghaosuc/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/hx_suc/" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2025 Xiang Hao. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html> 

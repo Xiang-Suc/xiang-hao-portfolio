@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     createTechParticles();
     handleMissingProjectImages();
+    makeProjectCardsClickable();
 });
 
 // Navbar functionality
@@ -461,5 +462,55 @@ function handleMissingProjectImages() {
             // Replace the image
             this.src = canvas.toDataURL('image/png');
         };
+    });
+}
+
+// Make project cards clickable
+function makeProjectCardsClickable() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Don't navigate if clicking on GitHub link
+            if (e.target.closest('.project-link')) {
+                return;
+            }
+            
+            // Determine which project was clicked based on its title
+            const projectTitle = this.querySelector('h3').textContent.trim();
+            let projectUrl = '';
+            
+            switch(projectTitle) {
+                case 'House Price Prediction':
+                    projectUrl = 'projects/house-price.html';
+                    break;
+                case 'Covid-19 Infection Rate Tracker':
+                    projectUrl = 'projects/covid-tracker.html';
+                    break;
+                case 'Global Development Insights Dashboard':
+                    projectUrl = 'projects/global-dashboard.html';
+                    break;
+                case 'Cold Call System':
+                    projectUrl = 'projects/cold-call.html';
+                    break;
+                case 'Time Tracker':
+                    projectUrl = 'projects/time-tracker.html';
+                    break;
+                case 'Safety Detection System':
+                    projectUrl = 'projects/safety-detection.html';
+                    break;
+                case 'Dataset-JSON Viewer':
+                    projectUrl = 'projects/json-viewer.html';
+                    break;
+                case 'Karting Game':
+                    projectUrl = 'projects/karting-game.html';
+                    break;
+                default:
+                    projectUrl = '#projects';
+            }
+            
+            // Navigate to the project detail page
+            window.location.href = projectUrl;
+        });
     });
 } 
