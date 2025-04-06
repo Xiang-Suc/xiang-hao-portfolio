@@ -306,7 +306,7 @@ body {
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -317,7 +317,8 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
-    aspect-ratio: auto;
+    aspect-ratio: 16/9;
+    height: 300px;
 }
 
 .gallery-item::before {
@@ -344,9 +345,11 @@ body {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     transition: transform 0.5s ease;
+    object-fit: cover;
+    object-position: center;
 }
 
 .gallery-item:hover img {
