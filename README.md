@@ -104,7 +104,7 @@ This website is deployed using GitHub Pages. To deploy your own version:
 
 If you want to use a custom domain:
 1. Add your domain in the GitHub Pages settings
-2. Create/update the `CNAME` file with your domain
+2. Create and update the `CNAME` file with your domain
 3. Configure your DNS settings with your domain provider
 
 ## Customization
