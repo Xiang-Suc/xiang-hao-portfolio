@@ -103,34 +103,72 @@ class Typewriter {
 function initCustomCursor() {
     const cursor = document.querySelector('.cursor');
     const cursorFollower = document.querySelector('.cursor-follower');
-    const links = document.querySelectorAll('a, button, .project-card, .interest-card, .certificate-item');
-
+    const links = document.querySelectorAll('a, button, .project-card, .interest-card, .certificate-item, input, textarea, select');
+    
+    if (!cursor || !cursorFollower) return;
+    
+    let mouseX = 0;
+    let mouseY = 0;
+    let followerX = 0;
+    let followerY = 0;
+    
     document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
+        mouseX = e.clientX;
+        mouseY = e.clientY;
         
-        setTimeout(() => {
-            cursorFollower.style.left = e.clientX + 'px';
-            cursorFollower.style.top = e.clientY + 'px';
-        }, 100);
+        // Update the main cursor position immediately
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
     });
-
+    
+    // Smooth follower animation with requestAnimationFrame
+    function animateFollower() {
+        // Calculate the distance between follower and cursor
+        let dx = mouseX - followerX;
+        let dy = mouseY - followerY;
+        
+        // Move follower with smooth easing
+        followerX += dx * 0.12;
+        followerY += dy * 0.12;
+        
+        cursorFollower.style.left = followerX + 'px';
+        cursorFollower.style.top = followerY + 'px';
+        
+        requestAnimationFrame(animateFollower);
+    }
+    
+    animateFollower();
+    
+    // Interactive elements hover effect
     links.forEach(link => {
         link.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            cursorFollower.style.width = '45px';
-            cursorFollower.style.height = '45px';
-            cursorFollower.style.backgroundColor = 'rgba(255, 58, 47, 0.3)';
+            cursor.style.transform = 'translate(-50%, -50%) scale(1.8)';
+            cursor.style.backgroundColor = 'var(--accent-color)';
+            cursorFollower.style.width = '48px';
+            cursorFollower.style.height = '48px';
+            cursorFollower.style.borderColor = 'var(--accent-color)';
         });
-
+        
         link.addEventListener('mouseleave', () => {
             cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursorFollower.style.width = '30px';
-            cursorFollower.style.height = '30px';
-            cursorFollower.style.backgroundColor = 'rgba(255, 58, 47, 0.2)';
+            cursor.style.backgroundColor = 'var(--primary-color)';
+            cursorFollower.style.width = '32px';
+            cursorFollower.style.height = '32px';
+            cursorFollower.style.borderColor = 'var(--primary-color)';
         });
     });
-
+    
+    // Text selection hover effect
+    document.addEventListener('mousedown', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
+        cursorFollower.style.transform = 'translate(-50%, -50%) scale(0.8)';
+    });
+    
+    document.addEventListener('mouseup', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+    });
+    
     // Hide cursor when leaving window
     document.addEventListener('mouseout', (e) => {
         if (e.relatedTarget === null) {
@@ -138,7 +176,7 @@ function initCustomCursor() {
             cursorFollower.style.opacity = '0';
         }
     });
-
+    
     document.addEventListener('mouseover', () => {
         cursor.style.opacity = '1';
         cursorFollower.style.opacity = '1';
